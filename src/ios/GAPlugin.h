@@ -20,6 +20,7 @@
 - (void) trackEvent:(CDVInvokedUrlCommand*)command;
 - (void) trackPage:(CDVInvokedUrlCommand*)command;
 - (void) setVariable:(CDVInvokedUrlCommand*)command;
+- (void) setVersion:(CDVInvokedUrlCommand*)command;
 
 - (void) successWithMessage:(NSString*)message toID:(NSString*)callbackID;
 - (void) failWithMessage:(NSString*)message toID:(NSString*)callbackID withError:(NSError*) error;

@@ -113,6 +113,13 @@
     }
 }
 
+- (void) setVersion:(CDVInvokedUrlCommand *)command
+{
+    NSString *version = [command.arguments objectAtIndex:0];
+    [[GAI sharedInstance].defaultTracker set:kGAIAppVersion value:version];
+    [self successWithMessage:[NSString stringWithFormat:@"setVersion: version = %@", version] toID:command.callbackId];
+}
+
 - (void) successWithMessage:(NSString *)message toID:(NSString *)callbackID
 {
     CDVPluginResult *commandResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:message];
